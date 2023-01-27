@@ -13,13 +13,19 @@ const Budget = () => {
         // console.log(budgetSlice);
 
         dispatcher(add({
-            "testCat": {
-                allocatedBudget: 3123,
-                subCategories: [{ subCategoryName: "test", subCategoryExp: 39 },
-                { subCategoryName: "111133t", subCategoryExp: 239 }]
-            }
+            categoryName: "tesftCat",
+            allocatedBudget: 3123,
+            subCategories: [{ subCategoryName: "test", subCategoryExp: 39 },
+            { subCategoryName: "111133t", subCategoryExp: 239 }]
         }))
+    
+
+        console.log(">>>", budgetSlice)
+    
     }
+
+
+
     let test = [
         {
             category: "Grocery",

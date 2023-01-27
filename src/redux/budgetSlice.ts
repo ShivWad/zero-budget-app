@@ -3,30 +3,42 @@ import { AppState } from './store';
 import { HYDRATE } from "next-redux-wrapper";
 
 export interface BudgetState {
-    categoryName: {
-        allocatedBudget: number | null,
-        subCategories: object[] | null
-    }
+
+    categoryName: string | null,
+    allocatedBudget: number | null,
+    subCategories: object[] | null
+
 }
 
 
-const initialState: BudgetState =
+const initialState =
 {
-    categoryName: {
-        allocatedBudget: null,
-        subCategories: null
-    }
+    categories: [
+        {
+            categoryName: null,
+            allocatedBudget: null,
+            subCategories: null
+        }
+    ]
 }
+
 
 export const budgetSlice = createSlice({
     name: "wholeBudget",
     initialState,
     reducers: {
         add: (state, action) => {
-            return {
-                ...state, ...action.payload
-            }
+state
+
+            return { // returning a copy of orignal state 
+                ...state, //copying the original state
+                todos: [...state.categories, action.payload] //new todos array 
+               }
         },
+
+        // modify: (state, action) => {
+        //     const index = state[action.payload]
+        // }
     },
 
     extraReducers: {
