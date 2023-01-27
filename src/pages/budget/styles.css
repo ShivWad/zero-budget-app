@@ -1,0 +1,7 @@
+.money-card-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1%;
+    flex-wrap: wrap;
+}

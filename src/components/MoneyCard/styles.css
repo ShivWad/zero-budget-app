@@ -1,0 +1,68 @@
+.money-card {
+    width: 40%;
+    padding: 2%;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid;
+    position: relative;
+}
+
+.top-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-container {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-expense-button {
+    align-self: center;
+    padding: 3px;
+}
+
+/* .expenses{
+   
+    right: 30px;
+} */
+
+.add-expense-dialog.MuiDialog-root {
+    padding: 10%;
+}
+
+.expense-progress {
+    height: 10px;
+    width: 100%;
+    margin: 10px;
+}
+
+.dynamic-bar-0-25 {
+    background-color: rgb(28, 182, 87);
+}
+
+.dynamic-bar-25-50 {
+    background-color: rgb(128, 214, 70);
+}
+
+.dynamic-bar-50-75 {
+    background-color: rgb(197, 180, 24);
+}
+
+.dynamic-bar-75-100 {
+    background-color: rgb(197, 122, 24);
+}
+
+.dynamic-bar-over {
+    background-color: red;
+}
+
+/* .expense-progress .MuiLinearProgress-bar {
+    background-color: auto;
+} */
+
+.bottom-container-actions {
+    display: flex;
+    justify-content:center;
+    gap: 5%;
+}
